@@ -1,0 +1,197 @@
+Imp commands::{
+	https://create-react-app.dev/docs/getting-started
+	https://react.dev/
+	https://www.youtube.com/watch?v=hnVOvvbQrwA&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=2
+}
+React Notes::{
+	1. Install node js, VS code, powershell (In window)
+	2. To check node is installed run these commands
+		$ node --version
+		$ npm --version
+
+	3. Install chrome addon "React developer tool"
+
+	4. Install some important extension in VS-code
+		- Thunder client
+		- Prettier - Code formatter
+		- Live Server
+		- ES7 React/Redux/GraphQL/React-Native snippets
+		- Bracket Pair Colorization || OR || Bracket Pair Color 
+		- Auto Rename Tag
+		- Setting -> Emmet -> Emmet : Include languages -> key:javascript    value:javascriptreact (for react auto suggestion.)
+
+	5. Open terminal in VS code and create react app
+		$npx create-react-app my-app
+
+	6. Foldfer structure:- 
+		a). node_modules:- default reactjs liberary/ package
+		b). public:- 
+		c). src:-  We need to create our components, component state and props inside the src folder.
+				- components:- blocks like footer, navigation, right side bar and left side bar..etc.
+				- Props :- Properties :- for example we have a form and in form we define props like First Name, Last Name, Email,  DOB ....etc. If I fill this form that will show my details and if someone like Ram define youeself then ..etc.
+				- State :- Page title ...etc
+
+	7. To start react app run the command
+		$ npm start
+		http://localhost:3000/
+
+	8. Some Importants topics related to the Js
+		=> Valiables
+			A)- var :- We can decleared variable more time.
+				For example : 
+					var  a = 45;
+					var a = 4584; // no error
+
+			B)- let :- After ES6 let sentex is used for variable. After decleared a variable we can not decleared variable again otherwise we will get error.
+				For example:- 
+					var  a = 45;
+					var a = 4584; // Error:- variable is already bdeclared
+			
+			C)- const :- After define the const we can not modified value otherwise thet will give error.
+				const  a = 45;
+				a = 4584; // Error:- Uncaught TypeError: Assignment to constant variable.
+
+		=> function v/s arrow function
+			// function // 'this' will hreturn error.
+		     function myHello(number){
+		        return "This is no. "+ this;
+		    }
+		    //console.log(myHello());
+
+		    // Arrow function // 'this' will not hreturn error.
+		    let myHello2 = (number) => {
+		        return "This is arrowfun no. "+ this;
+		    }
+		    //console.log(myHello2());
+
+		=> Callback function
+
+			setTimeout(() => {
+				console.log("In side the timeout...");
+			}, 3000); // 3 sec
+			console.log("This line under the timeout function script....");4
+
+		=> Promiss
+
+	9. JSX:
+		- This is html and can use js insede {}.
+		- JSX return all html indide a single html element. Otherwise you can use JSX fragment or empty element <>....</>
+
+	10. 
+		=> public/index.html :- Main entry point of web page.
+		=> src/index.js :- <App> component means that will render the app.js and that is responsable for user enterface.
+		=> React use two types of components:-
+			-> Class based components:-
+			-> Function based components:- new trands and mostaly used function based components
+				function App() {
+				  return (
+				    <div className="App">
+				      <header className="App-header">
+				        <img src={logo} className="App-logo" alt="logo" />
+				        <p>
+				          Edit <code>src/App.js</code> and save to reload.
+				        </p>
+				        <a
+				          className="App-link"
+				          href="https://reactjs.org"
+				          target="_blank"
+				          rel="noopener noreferrer"
+				        >
+				          Learn React with Lokesh jangid
+				        </a>
+				      </header>
+				    </div>
+				  );
+				}
+
+				- Inside the return is JSX
+
+	11. node_modules is the react js package, if we can delete this that will be get by command
+		$ npm install
+		because package.json have that information
+
+	12. Include bootstrip in react:- this is a css component, and that is responsive auto.
+		=> https://getbootstrap.com/
+		=> In side public folder add js and css
+		<!-- Include Bootstrip css -->
+    	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    	<!-- Include Bootstrip Js -->
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    	=> Add navigation bar using the bootstrip:- Add html from official bootstrip site and resolve html issue as per JSX rule
+    		o Closed all tags like input, and hr elements :- <hr className="tmp" />
+    		o and relased all properties name as per JSX standard. : class => className ...etc
+    		o
+
+    13. Default Export and Named export.
+    	a). Default export :- Set default value for object
+    		DefaultExport.js
+
+    	b). Named Export:- set value using name (object key)
+    		namedExport.js
+
+    14. Components and props
+    	- Components:- Components is simply a block for example "Navbar" is is components and put there code in seperate file and reuse this component in application anywhere.
+
+    	- Props:- props are properties of components like title, name ..etc and we can make static value dynamic using props and render these value using {}. For example we set props title="My React" in <Navbar /> in side App.js and pass this value in components file Navbar.js using {props.title}.
+
+    15. Validate Prpps value :- First import PropTypes and then set value type
+	    	import PropTypes from 'prop-types';
+	    	Navbar.propTypes = {appTitle: PropTypes.string.isRequired};
+
+	16. Set Default value of props
+		import PropTypes from 'prop-types';
+		Navbar.defaultProps = {appTitle: 'My React'};
+
+	17. State (Component State):- Hooks :- 
+
+	18. Template Litral in React :- back-stick (`)
+		<div className="form-check bg-color bg"> </div>
+		<div className={form-check bg-color bg}> </div>
+		Example:- <div className={`form-check form-switch mx-5 text-${props.mode==='light'?'dark':'light'}`}>
+
+
+	19. Conditional style in react
+		<div className='container-fluid main_container' style={{backgroundColor: mode==='light'?'white':'#363b4e',color: mode==='light'?'black':'white'}}>
+
+	20.
+
+	21.
+
+	22. React Rout : 
+		install routing package : npm install react-router-dom
+		and Import the router in top
+		import {BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
+		 return (
+			<Router>
+				<div>
+					<Routes>
+						<Route exact path="/" element={<Home homeText="Saumy Home" />} />
+						<Route exact path="/about" element={<About />} />
+					<Routes>
+				</div>
+			</Router>
+
+		Note:- Replace all anker tag (<a href="/about">) with <Link to="/about" />
+
+	23. To create build run the command :- ~$ npm run build
+
+	24. 
+
+
+
+}
+
+Note 1:- vs code comments:- Ctrl + Shift + a
+Note 2:- 
+
+
+
+Need to Read:{
+	- Hooks and states
+}
+
+https://www.youtube.com/watch?v=Sx2y4TjRZ9g&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=10
+
+https://www.youtube.com/watch?v=WNU1BEZIjxg&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt

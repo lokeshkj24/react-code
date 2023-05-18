@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict"; // standard js code : return the bug
+        let a = 34;
+        //let a = "This is a string.";
+        //console.log(a);
+
+        //const a = 45;
+       // a = 1254;
+        console.log(a);
+
+      /*  
+      - Data types:- 
+        numbers
+        objects
+        booleans
+        string
+        undefiend
+        null
+
+    - Functions
+
+    */
+   
+
+    // Object
+    let obja = {
+        r: 12,
+        m:45,
+        x:85,
+        func: function myfunction(number) {
+            console.log("My function return number value :" + number);
+        }
+    }
+    /* 
+        To gat object by :- obja
+        and get value of m :- obja.m 
+        to get value of function inside the object
+        obja.func(45);
+    
+    */
+
+    //Events : for example: let if want to click on h1 tag than print "clicked" and alert "hello".
+    document.addEventListener('click', function click(){
+        console.log("clicked");
+        //alert("hello");
+
+        let conf = confirm("Are you sure ?");
+        console.log(conf);   // that will return :- true/false or boolean
+    });
+
+    // Array
+    let arr = [5, 10, 15, 20, 50, 40];
+    //arr.forEach(element => console.log(element));   // => this is arraow function
+
+
+    // normal function v/s arrow function
+
+     // function
+     function myHello(number){
+        return "This is no. "+ this;
+    }
+    //console.log(myHello());
+
+    let myHello2 = (number) => {
+        return "This is arrowfun no. "+ this;
+    }
+    //console.log(myHello2());
+
+    //callback function
+    setTimeout(() => {
+        console.log("In side the timeout...");
+    }, 3000); // 3 sec
+    console.log("This line under the timeout function script....");
+        
+    </script>
+</head>
+<body>
+    <h1>
+        I am learing Js.
+    </h1> 
+</body>
+</html>
